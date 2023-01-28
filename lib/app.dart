@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_m3/components/drawer.dart';
 import 'package:flutter_m3/tabs/main_tab.dart';
+import 'package:flutter_m3/tabs/text_tab.dart';
+import 'package:flutter_m3/theme.dart';
 
 import 'components/color_picker.dart';
+import 'components/search_bar.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
@@ -20,11 +23,7 @@ class _AppState extends State<App> {
     return MaterialApp(
       title: "M3 custom",
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: _color,
-        brightness: _dark ? Brightness.dark : Brightness.light,
-      ),
+      theme: appTheme(color: _color, isDark: _dark),
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
@@ -43,12 +42,25 @@ class _AppState extends State<App> {
                 setState(() {
                   _color = color;
                 });
-              })
+              }),
+              Builder(
+                builder: (context) {
+                  return IconButton(
+                    onPressed: () {
+                      showSearch(
+                        context: context,
+                        delegate: CustomSearchDelegate(),
+                      );
+                    },
+                    icon: const Icon(Icons.search),
+                  );
+                },
+              )
             ],
             bottom: const TabBar(
               tabs: [
                 Tab(icon: Icon(Icons.apps_rounded)),
-                Tab(icon: Icon(Icons.sentiment_satisfied)),
+                Tab(icon: Icon(Icons.text_fields)),
               ],
             ),
           ),
@@ -76,7 +88,7 @@ class _AppState extends State<App> {
           body: const TabBarView(
             children: [
               MainTab(),
-              Center(child: Icon(Icons.sentiment_satisfied)),
+              TextTab(),
             ],
           ),
         ),
