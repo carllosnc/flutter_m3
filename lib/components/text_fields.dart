@@ -16,21 +16,13 @@ class _M3TextFieldsState extends State<M3TextFields> {
         TextFormField(
           autofocus: false,
           decoration: const InputDecoration(
+            prefixIcon: Icon(Icons.edit),
             border: OutlineInputBorder(),
-            labelText: 'Text field',
+            labelText: 'Enter your text',
             contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
           ),
         ),
         const SizedBox(height: 20),
-        TextFormField(
-          enabled: false,
-          autofocus: false,
-          decoration: const InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: 'Text field',
-            contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
-          ),
-        ),
       ],
     );
   }
