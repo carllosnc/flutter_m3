@@ -23,7 +23,10 @@ class _AppState extends State<App> {
     return MaterialApp(
       title: "M3 custom",
       debugShowCheckedModeBanner: false,
-      theme: appTheme(color: _color, isDark: _dark),
+      theme: appTheme(
+        color: _color,
+        isDark: _dark,
+      ),
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
