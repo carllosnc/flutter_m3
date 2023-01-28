@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.flutter_m3">
    <application
-        android:label="flutter_m3"
+        android:label="Flutter M3"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
