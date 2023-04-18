@@ -67,10 +67,6 @@ class _AppState extends State<App> {
               ],
             ),
           ),
-          floatingActionButton: FloatingActionButton(
-            onPressed: () {},
-            child: const Icon(Icons.add),
-          ),
           drawer: const M3Drawer(),
           bottomNavigationBar: NavigationBar(
             destinations: const [

@@ -12,26 +12,22 @@ class _M3SwitchState extends State<M3Switch> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Switch(
-            value: false,
-            onChanged: null,
-          ),
-          const SizedBox(width: 15),
-          Switch(
-            value: value,
-            onChanged: (switchValue) {
-              setState(() {
-                value = switchValue;
-              });
-            },
-          ),
-        ],
-      ),
+    return Row(
+      children: [
+        const Switch(
+          value: false,
+          onChanged: null,
+        ),
+        const SizedBox(width: 15),
+        Switch(
+          value: value,
+          onChanged: (switchValue) {
+            setState(() {
+              value = switchValue;
+            });
+          },
+        ),
+      ],
     );
   }
 }

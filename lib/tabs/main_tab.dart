@@ -12,6 +12,7 @@ import '../components/progress_indicators.dart';
 import '../components/radio_button.dart';
 import '../components/segmented_button.dart';
 import '../components/text_fields.dart';
+import '../components/float_buttons.dart';
 
 class MainTab extends StatelessWidget {
   const MainTab({super.key});
@@ -27,6 +28,8 @@ class MainTab extends StatelessWidget {
           children: const [
             M3Buttons(),
             SizedBox(height: 40),
+            M3FloatButtons(),
+            SizedBox(height: 40),
             M3Sliders(),
             SizedBox(height: 40),
             M3Switch(),
@@ -34,7 +37,7 @@ class MainTab extends StatelessWidget {
             M3ProgressIndicators(),
             SizedBox(height: 40),
             M3Snack(),
-            SizedBox(height: 40),
+            SizedBox(height: 10),
             M3BottomSheet(),
             SizedBox(height: 40),
             M3SegmentedButton(),
@@ -47,7 +50,7 @@ class MainTab extends StatelessWidget {
             SizedBox(height: 40),
             M3TextFields(),
             SizedBox(height: 40),
-            M3Cards()
+            M3Cards(),
           ],
         ),
       ),
