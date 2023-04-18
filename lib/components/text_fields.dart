@@ -23,6 +23,15 @@ class _M3TextFieldsState extends State<M3TextFields> {
           ),
         ),
         const SizedBox(height: 20),
+        TextFormField(
+          autofocus: false,
+          decoration: const InputDecoration(
+            prefixIcon: Icon(Icons.edit),
+            border: UnderlineInputBorder(),
+            labelText: 'Enter your text',
+            contentPadding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+          ),
+        ),
       ],
     );
   }

@@ -13,6 +13,7 @@ import '../components/radio_button.dart';
 import '../components/segmented_button.dart';
 import '../components/text_fields.dart';
 import '../components/float_buttons.dart';
+import '../components/dialog.dart';
 
 class MainTab extends StatelessWidget {
   const MainTab({super.key});
@@ -39,6 +40,8 @@ class MainTab extends StatelessWidget {
             M3Snack(),
             SizedBox(height: 10),
             M3BottomSheet(),
+            SizedBox(height: 10),
+            M3Dialog(),
             SizedBox(height: 40),
             M3SegmentedButton(),
             SizedBox(height: 40),
