@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 navLight() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -27,9 +28,13 @@ ThemeData appTheme({
 }) {
   navDark();
 
-  return ThemeData(
+  var baseTheme = ThemeData(
     useMaterial3: true,
     colorSchemeSeed: color,
     brightness: isDark ? Brightness.dark : Brightness.light,
+  );
+
+  return baseTheme.copyWith(
+    textTheme: GoogleFonts.robotoTextTheme(baseTheme.textTheme),
   );
 }
