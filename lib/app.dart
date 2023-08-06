@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_m3/components/drawer.dart';
+import 'package:flutter_m3/partials/slivers.dart';
 import 'package:flutter_m3/tabs/main_tab.dart';
 import 'package:flutter_m3/tabs/text_tab.dart';
+import 'package:flutter_m3/tabs/list_tab.dart';
 import 'package:flutter_m3/theme.dart';
 
 import 'components/color_picker.dart';
@@ -27,8 +29,11 @@ class _AppState extends State<App> {
         color: _color,
         isDark: _dark,
       ),
+      routes: {
+        '/list/sliver': (context) => const Slivers(),
+      },
       home: DefaultTabController(
-        length: 2,
+        length: 3,
         child: Scaffold(
           appBar: AppBar(
             title: const Text('Flutter M3'),
@@ -64,6 +69,7 @@ class _AppState extends State<App> {
               tabs: [
                 Tab(icon: Icon(Icons.apps_rounded)),
                 Tab(icon: Icon(Icons.text_fields)),
+                Tab(icon: Icon(Icons.list)),
               ],
             ),
           ),
@@ -88,6 +94,7 @@ class _AppState extends State<App> {
             children: [
               MainTab(),
               TextTab(),
+              ListTab(),
             ],
           ),
         ),

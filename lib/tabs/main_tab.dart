@@ -23,10 +23,10 @@ class MainTab extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         padding: const EdgeInsets.all(15),
-        child: Column(
+        child: const Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
+          children: [
             M3Buttons(),
             SizedBox(height: 40),
             M3FloatButtons(),
